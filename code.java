@@ -9,6 +9,16 @@ public class projet {
 		return ThreadLocalRandom.current().nextInt(a, b + 1);	
 	}
 	
+	static int[][]grilles = new int[6][7];
+	
+	public static void initialiseGrille() {
+		for(int i = 0; i<6; i++)
+			for(int j = 0; j<7;j++) {
+				grilles[i][j]=0;
+			
+		}
+		
+	}
 	
 	public static void afficheTab2D(int[][]tab) {
 		for(int i = 0; i<tab.length; i++) {
@@ -19,10 +29,11 @@ public class projet {
 		System.out.println();
 	}
 	
-	
 
 	public static void main(String[] args) {
+		afficheTab2D(grilles);
 
+		
 	}
 }
 
